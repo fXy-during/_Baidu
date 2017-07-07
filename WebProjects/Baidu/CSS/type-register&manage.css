@@ -1,0 +1,136 @@
+* {
+    margin:0;
+}
+ul li {
+    list-style: none;
+}
+#control-wrap {
+    visibility: hidden;
+    position: absolute;
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 350px;
+    z-index: 999;
+    background-color: #fff;
+    top: 10% !important;
+}
+.control-head {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #d6d6d6;
+}
+.control-btn-register,.control-btn-manage {
+    display: inline-block;
+    width: 44%;
+    height: 99%;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+.control-tri-top,.control-tri-bottem {
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.control-tri-top {
+    left: 220px;
+    border-top:35px solid #d6d6d6;
+    border-right: 60px solid transparent;
+}
+.control-tri-bottem {
+    left:220px;
+    border-top:35px solid transparent;
+    border-right: 60px solid #d6d6d6;
+}
+.Onlight_tri_top {
+    border-top-color: #004c5d;
+}
+.Onlight_tri_bottem {
+    border-right-color: #004c5d;
+}
+.Onlight_control_title {
+    background-color:#004c5d;
+    color:#fff;
+}
+.control-head span:hover {
+    text-decoration: underline;
+}
+.control-label{
+    margin:10px 0;
+}
+.control-label label {
+    width: 90px;
+    margin-left: 80px;
+    display: inline-block;
+    font-size: 17px;
+}
+.control-label input {
+    width:200px;
+    height: 20px;
+    border: none;
+    border-bottom:2px solid #004c5d;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+}
+.control-section-register,.control-section-admini {
+    position: absolute;
+    width: 500px;
+    height: 315px;
+}
+.control-btn-register {
+    float: left;
+}
+.control-btn-manage {
+    float: right;
+}
+.control-normal,.control-special {
+    width: 355px;
+    height: 84px;
+    padding: 5px 20px;
+    margin: 10px auto;
+    border-top: 2px solid #004c5d;
+    border-bottom: 2px solid #004c5d;
+    -webkit-overflow: overlay ;
+    -ms-overflow: auto;
+    -moz-overflow: auto;
+    -o-overflow: auto;
+    overflow: auto;
+}
+.control-section-admini label {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.ul-normal li,.ul-special li{
+    margin:3px 0;
+    height: 25px;
+    line-height: 25px;
+}
+.control-icon-up,.control-icon-down{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    float: right;
+    background-repeat: no-repeat !important;
+}
+.control-icon-down{
+    background: url("images/ui_reduce.png");
+}
+.control-icon-up{
+    background: url(images/ui_add.png);
+}
+.control-btn-role-save {
+    position: absolute;
+    height: 22px;
+    left: 383px;
+    top: 90%;
+    font-size: 15px;
+    bottom: 0;
+}

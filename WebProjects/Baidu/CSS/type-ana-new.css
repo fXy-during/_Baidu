@@ -1,0 +1,28 @@
+.speSec{
+    height: 334px;
+    margin-top: 20px;
+    position: relative;
+}
+.tableIcon{
+    width: 7%;
+}
+.tableFir{
+    color: #fa5200;/*已归集事件颜色区分*/
+}
+.tableSec{/*处置事件颜色区分*/
+    color:#07efff;
+}
+.page_char:hover{
+    background-color: #212121 !important;
+}
+.tableEvent tr td:nth-of-type(2),.tableEvent tr td:nth-of-type(3){
+    width: 25%;
+    padding:0 10px;
+    box-sizing: border-box;
+}
+.tableEvent tr td:first-child{
+    width: 8%;
+}
+.tableEvent tr td{
+    width: 10%;
+}

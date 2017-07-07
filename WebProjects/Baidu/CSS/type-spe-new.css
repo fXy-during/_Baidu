@@ -1,0 +1,181 @@
+/* 
+* @Author: anchen
+* @Date:   2017-05-06 15:26:25
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-06-17 21:28:26
+*/
+.chartSec-left{
+    width: 35% !important;
+    display: inline-block;
+    margin-top: 20px;
+    height: 330px;
+}
+.chartSec-right{
+    height: 330px;
+    margin-top: 20px;
+    width: 63% !important;
+    display: inline-block;
+    float: right;
+    position: relative;
+} 
+.tableIcon{
+    width: 12%;
+}
+.add_tap{
+    display: table-row;
+}
+.addtheme_input {
+    display: inline-block;
+}
+.add_caption{
+    width: 100%;
+    height: 45px;
+    font-size: 24px;
+}
+.add_head{
+    height: 38px;
+    font-size: 16px;
+    line-height: 38px;
+}
+.add_head span{
+    float: left;
+    margin:0 60px;
+}
+.add_input{
+    height: 45px;
+    display: inline-block;
+    width: 90%;
+    float: left;
+}
+.add_head{
+    border-bottom: 1px solid #fff;
+}
+.add_head span:last-child{
+    margin: 0 180px;
+}
+.add_input input{
+    width: 100px;
+    border:none;
+    background-color: #fff;
+    color: #000;
+}
+.add_input_left input:first-child{
+    margin:15px 15px;
+    width: 120px;
+}
+.add_bottom{
+    height: 31px;
+    margin-top:10px;
+    float:right;
+    margin-right: 181px;
+}
+.recorder{
+    margin-left: 150px;
+}
+.add_input_left input:last-child{
+    margin:15px 0px 15px 30px;
+    width: 120px;
+}
+.add_input_right{
+    display:  inline-block ;
+/*    display: -moz-flex;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flex;      /* TWEENER - IE 10 */
+    display: -webkit-inline-flex;
+    flex-wrap:-webkit-none;
+    flex-wrap:none;
+    width:58%;
+}
+.add_input_right input{
+    margin:15px 5px;
+    width:32%;
+}
+.add_input_left{
+    width: 41%;
+    height:inherit;
+    display: inline-block;
+}
+.del_tap_btn,.add_tap_btn{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-repeat: no-repeat !important;
+}
+.del_tap_btn{
+    background:url("images/ui_reduce.png");
+}
+.add_tap_btn{
+    background:url("images/ui_add.png");
+    margin-top: 12px;
+}
+.addTip,.add_del{
+    margin-top: 2px;
+    margin-right: 5px;
+    background-color: #353535;
+    border:0;
+    float: right;
+    font-weight: 500;
+    color:#fff;
+    padding-left: 5px;
+    width:100px;
+    height: 23px;
+}
+.addTip:hover,.add_del:hover{
+    border:1px solid #07efff;
+    cursor: pointer;
+}
+.addTip::-webkit-input-placeholder { /* WebKit browsers */ 
+    color: #004c5d; 
+    font-weight: 600;
+}
+.innerbox{
+    font-weight: 200!important;
+    position: relative;
+    left: 30px;
+    width:93%;
+}
+.add_radio{
+    position: absolute;
+    left: -17px;
+    top: 15px;
+}
+.chartSec-left-innerbox{
+    margin:0 auto;
+    width: 99%;
+    color:#fff;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    flex-direction:column;
+    height: 92%;
+    text-align: left;
+    position: relative;
+    overflow: auto;
+}
+.tableEvent td{
+    width: 10%;
+}
+.tableEvent td:nth-of-type(2),.tableEvent td:nth-of-type(3){
+    width: 25%;
+}
+.innerbox p:first-child{
+    font-size: 21px;
+    margin-top: 15px;
+    color: #000;
+    font-weight: 300;
+}
+.innerbox p:last-child{
+   margin-top: 5px;
+}
+.innerbox span{
+    margin:2px 10px 2px 0;
+    background-color:#353535 ;
+    padding:0 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 15px;
+}
+.topLight{
+    background-color: #004c5d !important;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11">
+<title>专题事件</title>
+<link href="./CSS/type.css?ver=1.5.5" rel="stylesheet">
+<link href="./CSS/jquery-ui.css" rel="stylesheet">
+<link href="./CSS/type-spe-new.css?ver=1.2.6" rel="stylesheet" >
+<link rel="stylesheet" href="CSS/zxf_page.css?ver=1.0.5">
+
+<link rel="stylesheet" href="CSS/reveal.css">
+<link rel="stylesheet" href="CSS/type-register&manage.css">
+</head>
+<body>
+<div class="wrap" data-table="specialEvent">
+    <section class="chartsBox">
+        <div class="wrapChart">
+            <nav class="header">
+                <ul class="title">
+                    <li><a href="BDo-Ana.html">舆情监测</a></li>
+                    <li><a href="BDo-Event.html">舆情处置</a></li>
+                    <li><a href="BDo-Spe.html" class="Onlight">专题事件</a></li>
+                </ul>
+                <div class="toTable btn">生成报表
+                    <section class='toTable_month'>
+                        <div class='toTable_month_title'>
+                            <p class="toTable_month_year year_17">2017</p>
+                            <button class="btn initForm btn-lg">生成</button>
+                            <button class="btn btn-lg" onclick="currMonth();">当前月份</button>
+                        </div>
+                        <table class='toTable_month_table'>
+                        </table>
+                    </section> <!-- toTable_month --> 
+                </div> <!-- toTable --> 
+                <p class="header_user"></p>
+            </nav>
+            <section class="chartSec">
+                <p class="chartTit"><span>舆情趋势折线图</span></p>
+                <div class="corp">
+                    <span>来源：</span>
+                    <div class="select_btn">
+                        <span class="select_tap source_type" >百度贴吧</span>
+                        <ul class="select_drop select_type">
+                            <li>百度贴吧</li>
+                            <li>微博</li>
+                            <li>微信</li>
+                        </ul>
+                    </div>
+                    <span class="smallTip">统计量：</span>
+                    <div class="select_btn">
+                        <span id="source_name" class="select_tap"></span>
+                        <ul class="select_drop  source_name_ul">
+                        </ul>
+                    </div>
+                    <span class="smallTip">起止日期:</span>
+                    <input type="text" onchange="checkDate();" class="chart_date_input startTime">
+                    <span>---</span>
+                    <input type="text" onchange="checkDate();" class="chart_date_input endTime">
+                </div>
+                <div class="chart" id="main">Echarts</div>
+            </section>
+            <section class="chartSec chartSec-left">
+                <p class="chartTit">
+                    <span>专题列表</span>
+                    <button class="addTip" onclick="topic_add();">添加专题</button>
+                    <button class="add_del" onclick="topic_del();"> 删除 </button>
+                </p>
+                <div class="chartSec-left-innerbox">
+                </div>
+            </section>
+            <section class="chartSec chartSec-right">
+                <p class="chartTit"><span>专题事件列表</span></p>
+                    <table class="table_head">
+                        <tr>
+                            <th class="tableIcon"></th>
+                            <th class="width18">主题</th>
+                            <th class="width18">主要观点</th>
+                            <th>类别</th>
+                            <th>发帖时间</th>             
+                        </tr>
+                    </table>
+                    <table class="tableEvent">
+                    </table>
+                    <div class="page">
+                        <div class="page_wrap page_spe">
+                            <div class="zxf_pagediv"></div>
+                        </div>
+                    </div>
+            </section>
+
+        </div>
+    </section>
+    <section class="addWrap">
+            <div class="readlyTable">
+                <p class="add_caption">添加专题</p>
+                <p class="add_head">
+                    <span>专题名称</span>
+                    <span>地域</span>
+                    <span>规则</span>
+                </p>
+                <div class="add_input">
+                        <div class="add_input_left">
+                            <input type="text" name="Tname" /><!-- 专题名 -->
+                            <input type="text" name="Tarea"/><!-- 地域 -->
+                        </div> 
+                        <div class="add_input_right">
+                             <input type="text" name="tap" />
+                             <input type="text" name="tap"/>
+                             <input type="text" name="tap"/>
+                        </div>
+                </div>
+                        <span onclick="add_tap_input();" class=" add_tap_btn"></span>
+                        <span onclick="del_tap_input();" class="del_tap_btn"></span>
+                <div class="add_bottom">
+                        <button class="saveBtn btn" onclick='saveSpe();'>保存</button>
+                        <button id="rollback" class="btn" onclick="hide()">取消</button>
+                </div>
+            </div>
+    </section>
+    <section class="readlyWrap">
+            <table class="readlyTable">
+                <caption>待归集事件</caption>
+                <tr class="table-th">
+                    <th class="width18">主題</th>
+                    <th class="width18">主要观点</th>
+                    <th>跟帖量</th>
+                    <th>类别</th>
+                    <th>发帖时间</th>
+                    <th>来源</th>
+                </tr>
+                <tr class="readlyBtn">
+                    <td colspan="3">
+                    </td>
+                    <td colspan="3">
+                        <button class="saveBtn btn" onclick='collEvent();'>保存</button>
+                        <button id="rollback" class="btn" onclick="hide()">取消</button>
+                    </td>  
+                </tr>
+            </table>
+    </section>
+</div>
+
+<!--弹窗内容-->
+<figure id="control-wrap">
+    <figcaption class="control-head">
+        <span class='control-btn-register'>添加新用户</span>
+        <span class='control-tri-top'></span>
+        <span class='control-tri-bottem'></span>
+        <span class='control-btn-manage'>权限管理</span>
+    </figcaption>
+
+    <div class='control-section-register'>
+        <div class="control-label">
+            <label>账户ID:</label>
+            <input type="text" name="userID">
+        </div>
+        <div class="control-label">
+            <label>密码：</label>
+            <input type="text" name="userPW">
+        </div>
+        <div class="control-label">
+            <label>确认密码：</label>
+            <input type="text" name="userPW-re">
+        </div>
+        <div class="control-label">
+            <label>角色：</label>
+            <div class="select_btn">
+                <span class="select_tap" >普通用户</span>
+                <ul class="select_drop">
+                    <li>普通用户</li>
+                    <li>特权用户</li>
+                    <li>超级特权用户</li>
+                </ul>
+            </div><!--select_btn-->
+        </div><!--control-label-->
+        <button class="btn control-btn-role-save">添加</button>
+    </div><!--control-section-register-->
+
+    <div class="control-section-admini">
+        <label>普通用户：</label>
+        <div class="control-normal control-flag" data-type='normal'>
+            <ul class="ul-normal">
+                <li>用戶一<span class='changeRole control-icon-up'></span></li>
+                <li>用戶二<span class='changeRole control-icon-up'></span></li>
+                <li>用戶三<span class='changeRole control-icon-up'></span></li>
+            </ul>
+        </div>
+
+        <label>特权用户：</label>
+        <div class="control-special control-flag" data-type='special'>
+            <ul class="ul-special">
+                <li>用戶四<span class='changeRole control-icon-down'></span></li>
+                <li>用戶五<span class='changeRole control-icon-down'></span></li>
+                <li>用戶六<span class='changeRole control-icon-down'></span></li>
+            </ul>
+        </div>
+        <button class="btn control-btn-role-save">确定</button>
+
+    </div><!--control-section-admini-->
+</figure>
+<script src="./jQ/jquery-3.2.1.js"></script>
+<script src="./JS/jquery-ui.js?ver=1.0.1"></script>
+<script src="../Echarts/echarts.min.js"></script>
+<script src="./JS/zxf_page.js?ver=1.0.2"></script>
+<script src="./JS/index-init.js?ver=1.6.4"></script>
+<script src="./JS/index-spe.js?ver=1.8.1"></script>
+
+<script src="JS/jquery.reveal.js"></script>
+<script src="JS/index_register&manage.js"></script>
+</body>
+</html>
