@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $( ".chart_date_input" ).datepicker();//初始日期组件
-    let currDate = new Date();  //获取当前日期
-    let table = $(".wrap")[0].getAttribute('data-table');
-    initData(format(currDate.getTime()-60*24*60*60*1000,"MM/dd/yyyy"),format(currDate,"MM/dd/yyyy"),'发帖量',table); //获取图表数据点并初始化图标 
+    var currDate = new Date();  //获取当前日期
+    var table = $(".wrap")[0].getAttribute('data-table');
+    initData(format(currDate.getTime()-60*24*60*60*1000,"yyyy-MM-dd"),format(currDate,"yyyy-MM-dd"),'发帖量',table); //获取图表数据点并初始化图标 
     changeSelect();  
     getSumPage('/event/dailyEvent/pageCount'); //初始化页码
     updata(1);
@@ -13,14 +13,14 @@ function hide(){
     $(document).unbind('click');
 }
 function show(obj){
-    let oneTime = false;
+    var oneTime = false;
     $('.readlyWrap').show();
     $('.tableAim').remove();
-    let $tr = $("<tr class='tableAim'></tr>");
+    var $tr = $("<tr class='tableAim'></tr>");
     $tr.append("<td>"+obj.theme+"</td>");
-    $tr.append("<td>"+obj.mainView+"</td>");
+    $tr.append("<td><input class='input_mainView input_show' type='text' value="+obj.mainView+"></td>");
     $tr.append("<td>"+obj.followCount+"</td>");
-    $tr.append("<td>"+obj.postType+"</td>");
+    $tr.append("<td><input class='input_postType input_show' type='text' value="+obj.postType+"></td>");
     $tr.append("<td>"+format(obj.postTime)+"</td>");
     $tr.append("<td>"+obj.source+"</td>");
     $tr.insertBefore('.readlyBtn');
@@ -28,7 +28,7 @@ function show(obj){
     // $(document).click(function(event) {
     //         /* Act on the event */
     //         //event.stopPropagation();
-    //         let $aim = $(event.target);
+    //         var $aim = $(event.target);
     //         if($aim.parents().filter('section').prop('className')!='readlyWrap' && oneTime ){
     //             $('#rollback').trigger('click');
     //         }
@@ -49,10 +49,10 @@ function reClass(id){
     });
 }
 function collEvent(){
-    let id = $('.tableAim').data('id');
-    //let admini = $('.sel_push option:selected').text();
-    let token = "Bearer "+localStorage.getItem("token");
-    let userName = localStorage.getItem("userName");
+    var id = $('.tableAim').data('id');
+    //var admini = $('.sel_push option:selected').text();
+    var token = "Bearer "+localStorage.getItem("token");
+    var userName = localStorage.getItem("userName");
     $.ajax({
         url: "/event/dailyEvent/" + id +"/"+userName+ "/collect",
         type: 'POST',
@@ -72,7 +72,7 @@ function updata(page){
     onPage(page);
     var $table = $('.tableEvent');
     $table.children().remove();
-    let token = "Bearer "+localStorage.getItem("token");
+    var token = "Bearer "+localStorage.getItem("token");
     $.ajax({ 
         //url: 'http://127.0.0.1:8888/' + new Date().getTime(),
         url:'/event/dailyEvent/page/' + page,
@@ -81,9 +81,9 @@ function updata(page){
         beforeSend:function(request) {
             request.setRequestHeader("Authorization", token);
         },
-        success:data=>{
-            $.each(data,(index,val)=>{
-                let $tr = $("<tr></tr>");
+        success:function(data){
+            $.each(data,function(index,val){
+                var $tr = $("<tr></tr>");
                 if (!val.collectionStatus) {
                     $tr.append("<td><span class='pushN'></span></td>");
                     $table.append($tr);
@@ -103,7 +103,7 @@ function updata(page){
                 $table.append($tr);
             });
         },
-        error:data=>{
+        error:function(data){
             error(data);
         }
     });

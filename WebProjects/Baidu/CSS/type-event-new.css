@@ -3,10 +3,14 @@
     margin-top: 20px;
     position: relative;
 }
+.table_hover tr:hover,.table_hover tr:hover td{
+    background-color: #6b6b6b !important;
+    color: #fff !important;
+}
 .tableIcon{
     width: 7%;
 }
-.tableEvent tr td:nth-of-type(1),.tableEvent tr td:nth-of-type(2),.tableEvent tr td:nth-of-type(8){
+.tableEvent tr td:nth-of-type(1),.tableEvent tr td:nth-of-type(2),.tableEvent tr td:nth-of-type(9){
     width: 15%;
 }
 .table_head tr th{
@@ -20,14 +24,20 @@ color: #000;
 } 
 .readlyTable td input{
     width: 70%;
-    border:none;
-    background-color: #fff;
-    color:#000;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #004c5d;
+    background-color: #d3d3d3;
+    cursor: text;
+    text-align: center;
 }
 .sentry_two,.sentry_one{
     overflow:visible !important;
 }
 .select_spe{
-    bottom: 23px;
+    bottom: 22px;
     top:auto;
+}
+.event_add_detail_input{
+    height: 20px;
 }

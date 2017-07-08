@@ -2,7 +2,7 @@ $(document).ready(function() {
     $( ".chart_date_input" ).datepicker();//初始日期组件
     let currDate = new Date();  //获取当前日期
     let table = $(".wrap")[0].getAttribute('data-table');
-    initData(format(currDate.getTime()-60*24*60*60*1000,"MM/dd/yyyy"),format(currDate,"MM/dd/yyyy"),'发帖量',table); //获取图表数据点并初始化图标
+    initData(format(currDate.getTime()-60*24*60*60*1000,"yyyy-MM-dd"),format(currDate,"yyyy-MM-dd"),'发帖量',table); //获取图表数据点并初始化图标
     changeSelect();
     //getSumPage(); //初始化页码
     //getSumPage('/event/dailyEvent/pageCount'); //待归集事件
@@ -21,12 +21,25 @@ function saveSpe(){  //添加专题
     let Tname = $("input[name='Tname']").val();
     let Tarea = $("input[name='Tarea']").val();
     let $Ttaps = $("input[name='tap']");
+    if (Tname.length == 0 || Tarea.length == 0 ) {
+        alert("请输入完整专题名和地域");
+        return ;
+    }
+    else{
+        for(el in $('.innerbox p:first-child') ){
+            if ($('.innerbox p:first-child').eq(el).text().trim() == Tname) {
+                alert("专题名重复！");
+                return;
+            }
+        }
+    }
+
     let sentry = [];
     let token = "Bearer "+localStorage.getItem("token");
     $Ttaps.each(function(index, el) {
         sentry.push($(el).val());
     });
-    let obj = {   
+    let obj = {
             id:0, //添加时传0
             name:Tname,//长度限制45
             region:Tarea,//长度限制45
@@ -41,7 +54,7 @@ function saveSpe(){  //添加专题
         beforeSend:function(request) {
             request.setRequestHeader("Authorization", token);
         },
-        complete:(XML)=>{
+        complete:function(XML){
             if(XML.readyState==4){
                 initWholePage();//刷新图表 专题列表 专题事件列表和页码
                 $('#rollback').trigger('click'); 
@@ -57,7 +70,7 @@ function topic_del(){  //删除专题
     let goal = $(".innerbox input:checked");
     let logo = [];
     let token = "Bearer "+localStorage.getItem("token");
-    $.each(goal,(index, val)=>{
+    $.each(goal,function(index, val){
          /* iterate through array or object */
             logo.push( $(val)[0].getAttribute('data-logo') );
             // $('.innerbox').filter(function(){
@@ -73,7 +86,7 @@ function topic_del(){  //删除专题
         beforeSend:function(request) {
             request.setRequestHeader("Authorization", token);
         },
-        complete:(XML)=>{
+        complete:function(XML){
             if(XML.readyState==4){
                 initWholePage();
             }
@@ -121,14 +134,14 @@ function updata_topic(){  //获取专题列表
         beforeSend:function(request) {
             request.setRequestHeader("Authorization", token);
         },
-        success:data=>{
-            $.each(data,(index, val)=>{
+        success:function(data){
+            $.each(data,function(index, val){
                  /* iterate through array or object */
                 let $div = $("<div class='innerbox'></div>");
                 let $p = $("<p></p>");
                 $div.append("<p>"+val.name+"</p>");
                 $p.append("<span class='topLight'>"+val.region+"</span>");
-                $.each(val.rules, (index, el) => {
+                $.each(val.rules, function(index, el){
                      /* iterate through array or object */
                      $p.append("<span>"+el+"</span>");
                 });
@@ -137,7 +150,7 @@ function updata_topic(){  //获取专题列表
                 $('.chartSec-left-innerbox').append($div);
             });
         },
-        error:XMLHttpRequest=>{
+        error:function(XMLHttpRequest){
             if(XMLHttpRequest.status!=401){
                alert("列表数据获取失败");
             }
@@ -151,9 +164,9 @@ function show(obj){
     $('.tableAim').remove();
     let $tr = $("<tr class='tableAim'></tr>");
     $tr.append("<td>"+obj.theme+"</td>");
-    $tr.append("<td>"+obj.mainView+"</td>");
+    $tr.append("<td><input class='input_mainView input_show' type='text' value="+obj.mainView+"></td>");
     $tr.append("<td>"+obj.followCount+"</td>");
-    $tr.append("<td>"+obj.postType+"</td>");
+    $tr.append("<td><input class='input_postType input_show' type='text' value="+obj.postType+"></td>");
     $tr.append("<td>"+format(obj.postTime)+"</td>");
     $tr.append("<td>"+obj.source+"</td>");
     $tr.insertBefore('.readlyBtn');
@@ -204,8 +217,8 @@ function updata(page){
         beforeSend:function(request) {
             request.setRequestHeader("Authorization", token);
         },
-        success:data=>{
-            $.each(data,(index,val)=>{
+        success:function(data){
+            $.each(data,function(index,val){
                 let $tr = $("<tr></tr>");
                 if (!val.collectionStatus) {
                     $tr.append("<td><span class='pushN'></span></td>");
@@ -224,7 +237,7 @@ function updata(page){
                 $table.append($tr);
             });
         },
-        error:XMLHttpRequest=>{
+        error:function(XMLHttpRequest){
             error(XMLHttpRequest);
         }
     });

@@ -1,15 +1,24 @@
 function initData(st,et,source_type,_table){
-    let chart = echarts.init(document.getElementById("main"));
-    let xAxis = [];
-    let yAxis = [];
-    let token = "Bearer "+localStorage.getItem("token");
+    var chart = echarts.init(document.getElementById("main"));
+    var xAxis = [];
+    var yAxis = [];
+    var token = "Bearer "+localStorage.getItem("token");
     $('.startTime').val(st);
     $('.endTime').val(et);
+    et = format((new Date(et)).getTime(),"MM/dd/yyyy");
+    st = format((new Date(st)).getTime(),"MM/dd/yyyy");
     chart.showLoading({
         text : '数据获取中',
         maskColor:'#4c4c4c',
         textColor:'#fff'
     });
+    var obj = {
+            source: '西南石油大学',
+            data : source_type,
+            beginTime :st,
+            endTime : et,
+            table : _table
+        };
     $.ajax({
         url: '/event/chart',
         //url: 'http://127.0.0.1:8888/' + new Date().getTime(),
@@ -18,7 +27,7 @@ function initData(st,et,source_type,_table){
         beforeSend:function(request) {
             request.setRequestHeader("Authorization", token);
         },
-        data: {
+        data:{
             source: '西南石油大学',
             data : source_type,
             beginTime :st,
@@ -30,34 +39,50 @@ function initData(st,et,source_type,_table){
             $.each(date, function(index, val) {
                  xAxis.push(val.x.slice(-5));
                  yAxis.push(val.y);
-        });
-        initEchart(xAxis,yAxis,chart);
-    },
-    fail : function() { 
-        console.log("数据请求失败！");
-    }
+            });
+            initEchart(xAxis,yAxis,chart);
+        },
+        error : function(xhr) { 
+            if (xhr.status==400) {
+                alert("日期错误或者没有相关数据");
+            }else{
+                alert("请求失败!");
+            }
+        }
     });
 }
     $(".select_drop").hide();
+
+    $('.select_btn').click(function(e) {
+        /* 鼠标点击事件 */
+        var $ul = $(e.currentTarget).find("ul");
+        if ( !$ul.is(":animated") ){
+            if ($ul.css('display')=="none") {
+                $ul.slideDown(150);
+            }else{
+                $ul.slideUp(150);
+            }
+        }
+    });
+
     $(".select_btn").hover(function(e) {
         /* 鼠标悬浮事件 */
-        if ( !$(this).is(":animated") ){
-            $(e.target).find("ul").slideDown(150);
+        e.stopPropagation;
+        var $ul = $(e.currentTarget).find("ul");
+        if ( !$ul.is(":animated") ){
+            $ul.slideDown(150);
         }
     }, function(e) {
         /* 鼠标离开事件 */
-        if ( !$(this).is(":animated") ){
-            $(e.target).find("ul").slideUp(150);
-        }
+        e.stopPropagation;
+            $(e.currentTarget).find("ul").slideUp(150);
+        // var $ul = $(e.currentTarget).find("ul");
+        // if ( !$ul.is(":animated") ){
+        // }
     });
-    $(".select_drop").mouseleave(function(event) {
-        /* 脱离文档流的元素*/
-        if ( !$(this).is(":animated") ){
-            $(".select_btn").trigger('mouseout');
-        }
-    });
+
 function currMonth(){ //选中当前月份
-    let _month = (new Date()).getMonth();
+    var _month = (new Date()).getMonth();
     $('.toTable_month_table tr td').each(function(index, el) {
         $(el).removeClass('toTable_month_onlight');
         if ($(el).attr("data-month")==_month) {
@@ -67,8 +92,8 @@ function currMonth(){ //选中当前月份
 }
 
 (function(){  //初始化月份选择、绑定事件
-    let $mouth_wrap = $("<tbody></tbody>");
-    let $tr;
+    var $mouth_wrap = $("<tbody></tbody>");
+    var $tr;
     for(i = 1,j = 2; j<=12; i++,j++){
         if (i==1||i==5||i==9) {
             $tr = $('<tr></tr>');
@@ -99,47 +124,48 @@ function currMonth(){ //选中当前月份
             $(this).text("2017").removeClass('year_16').addClass('year_17');
             _year = !_year;
         }
-});
+      
+    });
 
-$('.initForm').click(function(event) {
-    /* 下载文档 */
-    let token = "Bearer " + localStorage.getItem("token");
-    let _month = $(".toTable_month_onlight").attr("data-month");
-    let year = _year ? 2017 : 2016;
-    const url = "/event/report/" + year + "/" + _month;
-    const fileName = "西南石油大学"+ year + "年" + _month +"-"+(_month+1)+"月报表"; //
-    $.ajax({
-        url: url,
-        type: 'GET',
-        beforeSend:function(request) {
-            request.setRequestHeader("Authorization" , token);
-        },
-        success:function(data){
-            let a = document.createElement('a');
-            a.setAttribute('href' , url);
-            a.setAttribute('download' ,  fileName);
-            console.log(a);
-            a.click();
-            $(a).remove();
-        },
-        error:function(msg){
-            error(xml);
-        }
+    $('.initForm').click(function(event) {
+        /* 下载文档 */
+        var token = "Bearer " + localStorage.getItem("token");
+        var _month = $(".toTable_month_onlight").attr("data-month");
+        var year = _year ? 2017 : 2016;
+        var url = "/event/report/" + year + "/" + _month;
+        var fileName = "西南石油大学"+ year + "年" + _month +"-"+(_month+1)+"月舆情报表"; //
+        $.ajax({
+            url: url,
+            type: 'GET',
+            beforeSend:function(request) {
+                request.setRequestHeader("Authorization" , token);
+            },
+            success:function(data){
+                var a = document.createElement('a');
+                a.setAttribute('href' , url);
+                a.setAttribute('download' ,  fileName);
+                console.log(a);
+                a.click();
+                $(a).remove();
+            },
+            error:function(xml){
+                error(xml);
+            }
         });
     });
-})();
 
+})();
 (function(){
-    let $user = $('.header_user');
-    let userName = localStorage.getItem("userName");
-    $user.append("<span>欢迎登录 "+userName+"</span>");
+    var $user = $('.header_user');
+    var userName = localStorage.getItem("userName");
+    $user.append("<span>欢迎 普通用户 "+userName+" </span>");
     $user.append("<span><a href='javascript:void(0);' onclick='signOut(true);'>注销</a></span>");
+    $user.append("<a href='javascript:void(0);' class='big-link' data-reveal-id='control-wrap' data-animation='fade'>权限管理</a>");
     $('.chart_date_input').keydown(function(event) {
         /* Act on the event */
         return false;
     });
 })();
-
 function signOut(flag){
     if (flag) {
         if (confirm("确认注销,并返回登录界面？")) {
@@ -155,13 +181,13 @@ function signOut(flag){
     }
 }
 function checkDate(){
-    let startTime = $('.startTime').val(); //开始时间
-    let endTime = $('.endTime').val();  //结束时间
-    let source_type = $('#source_name').text();
-    let table = $(".wrap")[0].getAttribute('data-table'); //
+    var startTime = $('.startTime').val(); //开始时间
+    var endTime = $('.endTime').val();  //结束时间
+    var source_type = $('#source_name').text();
+    var table = $(".wrap")[0].getAttribute('data-table'); //
     if (startTime!=""&&endTime!=""){
-        let et = endTime.substr(0, 2)+endTime.substr(3, 2)+endTime.substr(6, 4);
-        let st = startTime.substr(0, 2)+startTime.substr(3, 2)+startTime.substr(6, 4);
+        var et = endTime.substr(0, 4)+endTime.substr(5, 2)+endTime.substr(8, 2);
+        var st = startTime.substr(0, 4)+startTime.substr(5, 2)+startTime.substr(8, 2);
         if(Number(et)-Number(st)>0){
                 initData(startTime,endTime,source_type,table);
                 //alert("日期选择正确");
@@ -172,9 +198,9 @@ function checkDate(){
     }
 }
 function initEchart(xAxis,data,chart){  //图表初始化
-    let maxY = eval("Math.max(" + data.toString() + ")");
-    let MaxY = Math.ceil((maxY+(maxY/4))/10)*10;
-    let source_type = $('#source_name').text();
+    var maxY = eval("Math.max(" + data.toString() + ")");
+    var MaxY = Math.ceil((maxY+(maxY/4))/10)*10;
+    var source_type = $('#source_name').text();
     var option ={
         tooltip:{
             show:true,
@@ -260,11 +286,11 @@ function initEchart(xAxis,data,chart){  //图表初始化
     }
 }
 function getSumPage(uri){   //  获取总页数
-    let $pageWrap = $(".page_wrap");
+    var $pageWrap = $(".page_wrap");
     $pageWrap.children().remove();
     $pageWrap.append('<div class="zxf_pagediv"></div>');
     //重置事件绑定
-    let token = "Bearer "+localStorage.getItem("token");
+    var token = "Bearer "+localStorage.getItem("token");
      $.ajax({
          url: uri,
          type: 'get',
@@ -301,8 +327,8 @@ function onPage(aim){
     $(".page_num:eq("+(aim-1)+")").addClass('onPage').parent().siblings().children('.page_num').removeClass('onPage');
 }
 function pageGoto(e){
-    let toPage = $('.pageInput').val();
-    let onPage = $('.pagingUI li a:contains('+toPage+')');
+    var toPage = $('.pageInput').val();
+    var onPage = $('.pagingUI li a:contains('+toPage+')');
     if(e && e.keyCode==13){ // enter 键
         updata($('.pageInput').val());
         if (onPage.length == 1){
@@ -326,14 +352,14 @@ function hideOnlight(){
     });
 }
 function changeSelect(){  
-    let type = new Array;
+    var type = new Array;
     type["微博"] = ["微博数据来源1","微博数据来源2","微博数据来源3"];
     type["微信"] = ["微信数据来源1","微信数据来源2","微信数据来源3"];
     type["百度贴吧"] = ["发帖量","跟帖量"];
 
-    let typeName = $('.source_type').text();
+    var typeName = $('.source_type').text();
     $(".source_name_ul").children().remove();
-    for(let ver in type[typeName]){
+    for(var ver in type[typeName]){
         $(".source_name_ul").append("<li>"+type[typeName][ver]+"</li>");
     }
     $('#source_name').text($('.source_name_ul li:first-child').text());  // 统计量
@@ -351,9 +377,9 @@ function changeSelect(){
     $(".source_name_ul li").click(function(event) {
         checkDate();
     });
-    // let source = document.getElementById("source_name");
+    // var source = document.getElementById("source_name");
     // source.options.length = 0 ;
-    // for(let ver in type[typeName]){
+    // for(var ver in type[typeName]){
     //     source.options.add(new Option(type[typeName][ver],ver+1));
     // }
 }
@@ -369,14 +395,14 @@ function changeSelect(){
 //     var $li = $("<li></li>");
 //     Page=Page>15?15:Page;
 
-//     for(let i = 1;i<=5;i++){
+//     for(var i = 1;i<=5;i++){
 //         $(".pageCis").append("<li><a class='page_num'>"+i+"</a></li>");
 //     }
 //     if (sumPage>5){$(".pageCis").append("<li><a class='page_char'>...</a></li>")};
 // }
 // function makePageList(sumPage){
 //     var pageList = [];
-//     for(let i = 1;i<=sumPage;i++){
+//     for(var i = 1;i<=sumPage;i++){
 //         pageList.push("第"+i+"页");
 //     }
 //     return pageList;
@@ -398,11 +424,11 @@ function changeSelect(){
 //         }
 // }
 function popUps(ancestor){  //弹窗
-    let oneTime = false;
+    var oneTime = false;
     $(document).click(function(event) {
         /* Act on the event */
         //event.stopPropagation();
-        let $aim = $(event.target);
+        var $aim = $(event.target);
         if($aim.parents().filter('section').prop('className')!=ancestor && oneTime ){
             $('#rollback').trigger('click');
             $('.toTable_month').fadeOut(200);
@@ -422,7 +448,7 @@ function format(mTime,mat){  //将毫秒时间时间格式化为mat
     if (mTime==null) {
         return " "; 
     }
-    let time = new Date(mTime);
+    var time = new Date(mTime);
     var o = {
       "M+" : time.getMonth()+1, //month
       "d+" : time.getDate(), //day

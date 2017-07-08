@@ -20,6 +20,10 @@ a{
 th{
     font-weight: 500!important;
     font-size: 15px;
+
+}
+td,th,span{
+    cursor: default;
 }
 .wrap{
     width: 100%;
@@ -46,9 +50,14 @@ th{
     display: inline-block;
     height: 40px;
     line-height: 40px;
-    margin-right: 35px;
+    margin-right: 28px;
     float: right;
     color:#fff;
+}
+.header_user a{
+    display: inline-block;
+    margin:0 10px;
+    text-decoration: underline;
 }
 .header_user span:first-child{
     margin-right: 15px;
@@ -75,14 +84,17 @@ th{
 .Onlight{
     color:#004c5d !important;
 }
-.Onlight_tr{
-    background-color: #4c4c4c !important;
+.Onlight_tr,.Onlight_tr td{
+    background-color: #6b6b6b !important;
+    color: #fff !important;
 }
 .chartSec{
+    position: relative;
     width: 100%;
     height: 333px;
     margin-top: 15px;
     background-color: #efefef;
+    overflow: hidden;
 }
 .chart{
     height: 230px;
@@ -114,7 +126,7 @@ th{
     font-size: 14px;
     z-index: 999;
     color: #fff;
-    background-color: #efefef;
+    background-color: #d3d3d3;
 }
 .readlyTable{
     width: 100%;
@@ -148,7 +160,7 @@ th{
 .toTable{
     position: relative;
     display: inline-block;
-    left: 45%;
+    left: 40%;
     top: -26px;
     margin: 0;
     padding: 3px 6px;
@@ -281,10 +293,10 @@ th{
     border-top:1px solid #303030;
 }
 .tableEvent tr td{
-    cursor: pointer;
     font-size: 14px;
     color: #000;
     font-weight: ;
+    cursor: default;
 }
 .width8{
     width: 8% !important;
@@ -395,6 +407,7 @@ th{
     color: #000;
     border-radius: 2px;
     text-align: center;
+    font-size: 15px;
 }
 /*下拉条 6/14*/
 .select_btn{
@@ -404,11 +417,14 @@ th{
     height: 22px;
     /*border:1px solid #004c5d;  /*对mouse事件的影响*/
     margin-top: 15px;
-    padding:1px;
+    padding:1px 2px;
     border-radius: 2px;
     color: deepskyblue;
     background-color: #004c5d;
     box-sizing: border-box;
+}
+.select_btn_spe{
+    margin-top: 0 !important;
 }
 .select_tap{
     display: inline-block;
@@ -438,6 +454,18 @@ th{
     color: #000;
     border-radius: 2px;
 }   
+.input_show{
+    width: 95%;
+    outline: none;
+    border: none;
+    border-bottom:1px solid #004c5d;
+    background-color: #d3d3d3;
+    cursor: text;
+    text-align: center;
+    height: 23px;
+    font-size: 14px;
+    margin: 0;
+}
 /*ui datapicker pre/next */
 /*.ui-datepicker-next{
     background-image: url("images/ui_next.png") !important;
@@ -445,3 +473,16 @@ th{
 .ui-datepicker-prev{
     background-image: url("images/ui_pre.png") !important;
 }*/
+.active-up,.active-down{
+    position: absolute;
+    left: 49%;
+    bottom: 0;
+    height: 16px;
+    width: 27px;
+}
+.active-up{
+    background: url("images/ui_slideUp.png");
+}
+.active-down{
+    background: url("images/ui_slideDown.png");
+}
