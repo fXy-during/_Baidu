@@ -16,13 +16,13 @@
     width: 9%;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */ 
-color: #000;
+color: #fff; 
 } 
 .readlyTable td input{
     width: 70%;
     border:none;
-    background-color: #fff;
-    color:#000;
+    background-color: #6b6b6b;
+    color:#fff;
 }
 .sentry_two,.sentry_one{
     overflow:visible !important;

@@ -5,20 +5,11 @@ function initData(st,et,source_type,_table){
     let token = "Bearer "+localStorage.getItem("token");
     $('.startTime').val(st);
     $('.endTime').val(et);
-    et = format((new Date(et)).getTime(),"MM/dd/yyyy");
-    st = format((new Date(st)).getTime(),"MM/dd/yyyy");
     chart.showLoading({
         text : '数据获取中',
         maskColor:'#4c4c4c',
         textColor:'#fff'
     });
-    let obj = {
-            source: '西南石油大学',
-            data : source_type,
-            beginTime :st,
-            endTime : et,
-            table : _table
-        };
     $.ajax({
         url: '/event/chart',
         //url: 'http://127.0.0.1:8888/' + new Date().getTime(),
@@ -27,7 +18,7 @@ function initData(st,et,source_type,_table){
         beforeSend:function(request) {
             request.setRequestHeader("Authorization", token);
         },
-        data:{
+        data: {
             source: '西南石油大学',
             data : source_type,
             beginTime :st,
@@ -39,48 +30,32 @@ function initData(st,et,source_type,_table){
             $.each(date, function(index, val) {
                  xAxis.push(val.x.slice(-5));
                  yAxis.push(val.y);
-            });
-            initEchart(xAxis,yAxis,chart);
-        },
-        error : function(xhr) { 
-            if (xhr.status==400) {
-                alert("日期错误或者没有相关数据");
-            }else{
-                alert("请求失败!");
-            }
-        }
+        });
+        initEchart(xAxis,yAxis,chart);
+    },
+    fail : function() { 
+        console.log("数据请求失败！");
+    }
     });
 }
     $(".select_drop").hide();
-
-    $('.select_btn').click(function(e) {
-        /* 鼠标点击事件 */
-        let $ul = $(e.currentTarget).find("ul");
-        if ( !$ul.is(":animated") ){
-            if ($ul.css('display')=="none") {
-                $ul.slideDown(150);
-            }else{
-                $ul.slideUp(150);
-            }
-        }
-    });
-
     $(".select_btn").hover(function(e) {
         /* 鼠标悬浮事件 */
-        e.stopPropagation;
-        let $ul = $(e.currentTarget).find("ul");
-        if ( !$ul.is(":animated") ){
-            $ul.slideDown(150);
+        if ( !$(this).is(":animated") ){
+            $(e.target).find("ul").slideDown(150);
         }
     }, function(e) {
         /* 鼠标离开事件 */
-        e.stopPropagation;
-            $(e.currentTarget).find("ul").slideUp(150);
-        // let $ul = $(e.currentTarget).find("ul");
-        // if ( !$ul.is(":animated") ){
-        // }
+        if ( !$(this).is(":animated") ){
+            $(e.target).find("ul").slideUp(150);
+        }
     });
-
+    $(".select_drop").mouseleave(function(event) {
+        /* 脱离文档流的元素*/
+        if ( !$(this).is(":animated") ){
+            $(".select_btn").trigger('mouseout');
+        }
+    });
 function currMonth(){ //选中当前月份
     let _month = (new Date()).getMonth();
     $('.toTable_month_table tr td').each(function(index, el) {
@@ -124,48 +99,47 @@ function currMonth(){ //选中当前月份
             $(this).text("2017").removeClass('year_16').addClass('year_17');
             _year = !_year;
         }
-      
-    });
+});
 
-    $('.initForm').click(function(event) {
-        /* 下载文档 */
-        let token = "Bearer " + localStorage.getItem("token");
-        let _month = $(".toTable_month_onlight").attr("data-month");
-        let year = _year ? 2017 : 2016;
-        const url = "/event/report/" + year + "/" + _month;
-        const fileName = "西南石油大学"+ year + "年" + _month +"-"+(_month+1)+"月舆情报表"; //
-        $.ajax({
-            url: url,
-            type: 'GET',
-            beforeSend:function(request) {
-                request.setRequestHeader("Authorization" , token);
-            },
-            success:function(data){
-                let a = document.createElement('a');
-                a.setAttribute('href' , url);
-                a.setAttribute('download' ,  fileName);
-                console.log(a);
-                a.click();
-                $(a).remove();
-            },
-            error:function(xml){
-                error(xml);
-            }
+$('.initForm').click(function(event) {
+    /* 下载文档 */
+    let token = "Bearer " + localStorage.getItem("token");
+    let _month = $(".toTable_month_onlight").attr("data-month");
+    let year = _year ? 2017 : 2016;
+    const url = "/event/report/" + year + "/" + _month;
+    const fileName = "西南石油大学"+ year + "年" + _month +"-"+(_month+1)+"月报表"; //
+    $.ajax({
+        url: url,
+        type: 'GET',
+        beforeSend:function(request) {
+            request.setRequestHeader("Authorization" , token);
+        },
+        success:function(data){
+            let a = document.createElement('a');
+            a.setAttribute('href' , url);
+            a.setAttribute('download' ,  fileName);
+            console.log(a);
+            a.click();
+            $(a).remove();
+        },
+        error:function(msg){
+            error(xml);
+        }
         });
     });
-
 })();
+
 (function(){
     let $user = $('.header_user');
     let userName = localStorage.getItem("userName");
-    $user.append("<span>欢迎 普通用户 "+userName+" </span>");
+    $user.append("<span>欢迎登录 "+userName+"</span>");
     $user.append("<span><a href='javascript:void(0);' onclick='signOut(true);'>注销</a></span>");
-    $user.append("<a href='javascript:void(0);' class='big-link' data-reveal-id='control-wrap' data-animation='fade'>权限管理</a>");
     $('.chart_date_input').keydown(function(event) {
         /* Act on the event */
         return false;
     });
 })();
+
 function signOut(flag){
     if (flag) {
         if (confirm("确认注销,并返回登录界面？")) {
@@ -186,8 +160,8 @@ function checkDate(){
     let source_type = $('#source_name').text();
     let table = $(".wrap")[0].getAttribute('data-table'); //
     if (startTime!=""&&endTime!=""){
-        let et = endTime.substr(0, 4)+endTime.substr(5, 2)+endTime.substr(8, 2);
-        let st = startTime.substr(0, 4)+startTime.substr(5, 2)+startTime.substr(8, 2);
+        let et = endTime.substr(0, 2)+endTime.substr(3, 2)+endTime.substr(6, 4);
+        let st = startTime.substr(0, 2)+startTime.substr(3, 2)+startTime.substr(6, 4);
         if(Number(et)-Number(st)>0){
                 initData(startTime,endTime,source_type,table);
                 //alert("日期选择正确");

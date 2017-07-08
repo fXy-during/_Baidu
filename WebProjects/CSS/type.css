@@ -11,7 +11,7 @@ td{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-weight: 400 !important;
+    font-weight: 200 !important;
 }
 a{
     color:#fff;
@@ -24,31 +24,30 @@ th{
 .wrap{
     width: 100%;
     min-width: 1366px;
-    margin: 0 auto;
     background-color: #333;
+    margin: 0 auto;
 }
 .chartsBox{
     width: 100%;
     height: 753px;
-    background-color: #fff;
+    background-color: #353535;
 }
 .wrapChart{
     margin:0 83px;
     width: 88%;
 }
 .header{
-    position: relative;
     width: 100%;
     height: 40px;
-    background-color: #d6d6d6;
+    background-color: #212121;
 }
 .header_user{
     display: inline-block;
+    float: right;
     height: 40px;
     line-height: 40px;
-    margin-right: 35px;
-    float: right;
     color:#fff;
+    margin-right: 35px;
 }
 .header_user span:first-child{
     margin-right: 15px;
@@ -59,21 +58,21 @@ th{
 }
 .title li{
     height: 50px;
-    line-height: 24px;
     float:left;
+    line-height: 24px;
 }
 .title a{
-    display: inline-block;
-    margin-top:10px;
     text-decoration: none;
     font-size: 24px;
-    color:#000;
+    color:#fff;
+    margin-top:10px;
+    display: inline-block;
 }
 .title li:nth-of-type(2){
     margin:0 20px;
 }
 .Onlight{
-    color:#004c5d !important;
+    color:#07efff !important;
 }
 .Onlight_tr{
     background-color: #4c4c4c !important;
@@ -82,46 +81,45 @@ th{
     width: 100%;
     height: 333px;
     margin-top: 15px;
-    background-color: #efefef;
+    background-color: #212121;
 }
 .chart{
-    height: 230px;
+    background-color: #212121 !important;
     width: 100%;
-    background-color: #efefef !important;
+    height: 230px;
 }
 .chartTit{
     width: 100%;
     height: 28px;
-    background-color: #d6d6d6;
+    background-color: #4c4c4c;
 }
 .chartTit span{
     display: inline-block;
-    margin-left: 34px;
+    margin-left: 14px;
+    font-size: 21px;
     height: 28px;
     line-height: 30px;
-    font-size: 21px;
-    color: #000;
+    color: #fff;
 }
 .readlyWrap,.addWrap{
-    position: absolute;
-    display: none;
-    top:50%;
-    margin:0 auto;
-    left: calc(50% - 440px);
+    font-size: 14px;
     text-align: center;
+    color: #fff;
+    margin:0 auto;
     width: 880px;
     height: 175px;
-    font-size: 14px;
+    background-color: #353535;
+    position: absolute;
+    top:50%;
+    left: calc(50% - 440px);
+    display: none;
     z-index: 999;
-    color: #fff;
-    background-color: #efefef;
 }
 .readlyTable{
+    border-collapse: collapse;
     width: 100%;
     margin-top: 5px;
     table-layout: fixed;
-    border-collapse: collapse;
-    color: #000;
 }
 .readlyTable tr{
     height: 40px;
@@ -141,85 +139,12 @@ th{
     font-weight: 200;
 }
 .corp span{
-    color:#000;
+    color:#fff;
     font-size: 14px;
-    font-weight: 400;
 }
 .toTable{
-    position: relative;
-    display: inline-block;
-    left: 45%;
-    top: -26px;
-    margin: 0;
-    padding: 3px 6px;
-    box-sizing: content-box;
-}
-.toTable_month{
-    position: absolute;
-    display: none;
-    left: 0;
-    top:22px;
-    width: 270px;
-    height: 200px;
-    border-radius: 4px;
-    z-index: 999;
-    border: 1px solid #d3d3d3;
-    background-color:#fff;
-}
-.toTable_month_title{
-    height: 32px;
-    width:98%;
-    margin: 2px auto;
-    background-color: #d3d3d3;
-    border-radius: 4px;
-}
-.toTable_month_year{
-    display: inline-block;
-    padding: 0 10px;
-    color: #000;
-    height: 32px;
-    line-height: 32px;
-    font-size: 18px;
-    font-style: italic;
-}
-.year_17:after{
-    content: "/2016";
-    font-size: 12px;
-    font-style: italic;
-}
-.year_16:after{
-    content: "/2017";
-    font-size: 12px;
-    font-style: italic;
-}
-.toTable_month_title button{
     float: right;
-    margin:7px 5px 0 0;
-}
-.toTable_month_table tbody{
-    width: 100%;
-    height: 100%;
-}
-.toTable_month_table tr td{
-    width: 25%;
-    text-align:center;
-    font-size: 14px;
-    border:1px solid #fff;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.toTable_month_onlight{
-    border: 1px solid #d3d3d3 !important;
-    background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
-    font-weight: normal;
-    color: #555555;
-    box-sizing:border-box;
-}
-.toTable_month_table{
-    width: 100%;
-    height: 82%;
-    color:#000;
+    margin-top: 16px;
 }
 .selBox{
     margin-top: 16px;
@@ -230,18 +155,11 @@ th{
     margin-left: 15px;
 }
 .btn{
-    width: 66px;
-    height: 17px;
-    line-height: 17px;
+    background-color: #353535;
     border:none;
-    background-color: #004c5d;
-    border-radius: 2px;
     color:#fff;
-}
-.btn-lg{
-    height:23px !important;
-    line-height: 23px !important;
-    font-size: 15px;
+    width: 55px;
+    height: 18px;
 }
 .btn:hover{ 
     cursor: pointer;
@@ -283,8 +201,6 @@ th{
 .tableEvent tr td{
     cursor: pointer;
     font-size: 14px;
-    color: #000;
-    font-weight: ;
 }
 .width8{
     width: 8% !important;
@@ -296,78 +212,78 @@ th{
     width: 15% !important;
 }
 .table_head{
-    width: 96%;
     height: 45px;
-    margin:0 auto;
     font-size: 18px;
-    color: #000;
+    color: #fff;
+    width: 96%;
+    margin:0 auto;
 }
 .table_head tr th{
     width: 10%;
 }
 .pageCis{
+    list-style: none;
     display: table-cell;
-    max-width: 700px;
     color:#fff;
     vertical-align:top;
-    list-style: none;
+    max-width: 700px;
     text-overflow:ellipsis;
     white-space: nowrap;
 }
 .pageInput{
     width: 100px;
-    margin:0 10px;
     background-color:#4c4c4c;
+    margin:0 10px;
     border:none;
     color:#fff;
 }
 .pageInput_lable{
-    display: inline-block;
-    height: 32px;
-    margin-left:10px;
-    font-size: 14px;
-    line-height: 32px;
     color:#fff;
+    font-size: 14px;
+    display: inline-block;
+    margin-left:10px;
+    height: 32px;
+    line-height: 32px;
 }
 .pageCis li{
     float: left;
-    height: 15px;
-    margin-top: 10px;
     margin: 0 6px;
     font-size: 12px;
     text-align: center;
+    height: 15px;
+    margin-top: 10px;
 }
 .pageCis a{
-    display: inline-block;
+    text-decoration: none;
     width: 14px;
     height: 14px;
-    cursor: pointer;
     color: #fff;
-    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 .onPage{
     border-radius: 100%;
     background-color: #004c5d;
 }
 .page{
-    position: absolute;
     width: 100%;
     height: 30px;
+    position: absolute;
     bottom: 0px;
     left: -10px;
-    padding:0;
     text-align: center;
+    padding:0;
     vertical-align: middle;
 }
 .page select,input{
     margin-top: 6px;
 }
 .page_wrap{
-    display: table;
-    width: 55%;
-    height: 33px;
     margin:0 auto;
+    display: table;
     vertical-align: middle;
+    height: 33px;
+    width: 55%;
 }
 .page_spe{
     width: 88% !important;
@@ -382,66 +298,60 @@ th{
     display: inline-block;
     width: 25px;
     height: 25px;
-    margin-top: 12px;
+    border-radius: 100%;
+    border:1px solid #fff;
     cursor: pointer;
-    background: url("images/ui_add.png");
-    background-repeat: no-repeat;
+}
+.pushN::before{
+    content: "十";
+    line-height: 25px;
+    font-size: 18px;
 }
 .chart_date_input{
-    height: 23px;
-    width: 150px;
-    background-color: #fff;
+    width: 100px;
+    background-color: #353535;
     border:none;
-    color: #000;
-    border-radius: 2px;
+    color: #fff;
+    width: 150px;
+    height: 23px;
+    border-radius: 5px;
     text-align: center;
 }
 /*下拉条 6/14*/
 .select_btn{
-    position: relative;
     display: inline-block;
     width: 150px;
     height: 22px;
-    /*border:1px solid #004c5d;  /*对mouse事件的影响*/
-    margin-top: 15px;
-    padding:1px;
+    border:1px solid #353535;  /*对mouse事件的影响*/
     border-radius: 2px;
+    background-color: #353535;
     color: deepskyblue;
-    background-color: #004c5d;
-    box-sizing: border-box;
+    position: relative;
+    margin-top: 15px;
 }
 .select_tap{
-    display: inline-block;
-    width:100%;
     text-align: center;
-    color:#fff !important;
+    width:100%;
+    display: inline-block;
+    color:#fff;
 }
 .select_drop{
     position: absolute;
-    background-color: #006076;
-    top: 20px;
+    background-color: #353535;
+    top: 22px;
     width:150px;
-    z-index: 999;
-    left:0px;
     padding:0;
-    margin: 0;
     text-align: center;
-    border-radius: 2px;
+    border-radius: 5px;
+    margin: 0;
+    z-index: 999;
     color:#fff;
 }
 .select_drop li{
     cursor: pointer;
-    font-size: 14px;
 }
 .select_drop li:hover{
     background-color: #fff;
     color: #000;
-    border-radius: 2px;
-}   
-/*ui datapicker pre/next */
-/*.ui-datepicker-next{
-    background-image: url("images/ui_next.png") !important;
+    border-radius: 5px;
 }
-.ui-datepicker-prev{
-    background-image: url("images/ui_pre.png") !important;
-}*/

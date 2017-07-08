@@ -2,8 +2,8 @@
 define(['jquery','error'],function($,error){
 
     $("#check").click(function(event) {
-        let userName = $("input[name=name]").val();
-        let pw = $("input[name=pw]").val();
+        var userName = $("input[name=name]").val();
+        var pw = $("input[name=pw]").val();
         if (this.checked) {
             localStorage.setItem("loginName",userName);
             localStorage.setItem("loginPw",pw);
@@ -16,9 +16,9 @@ define(['jquery','error'],function($,error){
 
     $('.login_btn').click(function(event) {
         /* Act on the event */
-        let id = $('input[name=name]').val();
-        let pw = $('input[name=pw]').val();
-        let obj = {
+        var id = $('input[name=name]').val();
+        var pw = $('input[name=pw]').val();
+        var obj = {
             username : id,
             password : pw
         };
@@ -28,9 +28,9 @@ define(['jquery','error'],function($,error){
             dataType: 'json',
             contentType:"application/json;charset=utf-8",
             data: JSON.stringify(obj),
-            complete:(XML,msg)=>{
+            complete:function(XML,msg){
                     if (msg=="success") {
-                        let resp = JSON.parse(XML.responseText);
+                        var resp = JSON.parse(XML.responseText);
                         localStorage.setItem("token",resp.token);
                         localStorage.setItem("userName",resp.username);
                         console.log(localStorage.getItem("token"));

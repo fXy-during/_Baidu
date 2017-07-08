@@ -2,15 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=11">
 <title>舆情处置</title>
+<link href="./CSS/type.css?ver=1.3.5" rel="stylesheet">
 <link href="CSS/jquery-ui.css" rel="stylesheet">
-<link href="./CSS/type.css?ver=1.5.5" rel="stylesheet">
 <link rel="stylesheet" href="CSS/zxf_page.css?ver=1.0.5">
-<link href="./CSS/type-event-new.css?ver=1.2.1" rel="stylesheet" >
-
-<link rel="stylesheet" href="CSS/reveal.css">
-<link rel="stylesheet" href="CSS/type-register&manage.css">
+<link href="./CSS/type-event-new.css?ver=1.1.1" rel="stylesheet" >
 </head>
 <body>
 <div class="wrap" data-table="handledEvent">
@@ -68,15 +64,14 @@
                         <th class="width15">主要观点</th>
                         <th>处置情况</th>
                         <th>反馈情况</th>
-                        <th>归集人</th>
                         <th>归集时间</th>
-                        <th>处置人</th>
                         <th>处置时间</th>
+                        <th>记录人</th>
                         <th class="width15">具体处置</th>
-                        <!-- <th>备注</th> -->
+                        <th>备注</th>
                     </tr> 
                 </table>
-                <table class="tableEvent table_hover">
+                <table class="tableEvent">
                 </table>
                 <div class="page">
                     <div class="page_wrap">
@@ -96,15 +91,16 @@
                         <th>主題</th>
                         <th>处置情况</th>
                         <th>反馈情况</th>
-                        <th colspan="2">具体处置</th>
+                        <th>具体处置</th>
+                        <th>备注</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tableAim">
                         <td class="sentry_one">
-                            <div class="select_btn select_btn_spe">
+                            <div class="select_btn">
                                 <span class="select_tap select_handled">未处置</span>
-                                <ul class="select_drop select_spe select_handled_ul">
+                                <ul class="select_drop select_spe">
                                     <li>未处置</li>
                                     <li>已转后勤</li>
                                     <li>已转处置</li>
@@ -130,7 +126,7 @@
                             </div><!--select_btn-->
                         </td>
                         <td class="sentry_two">
-                            <div class="select_btn select_btn_spe">
+                            <div class="select_btn">
                                 <span class="select_tap select_feedback">未反馈</span>
                                 <ul class="select_drop select_feedback_ul">
                                     <li>未反馈</li>
@@ -150,73 +146,11 @@
             </table>
     </section>
 </div> <!-- .wrap -->
-
-<!--弹窗内容-->
-<figure id="control-wrap">
-    <figcaption class="control-head">
-        <span class='control-btn-register'>添加新用户</span>
-        <span class='control-tri-top'></span>
-        <span class='control-tri-bottem'></span>
-        <span class='control-btn-manage'>权限管理</span>
-    </figcaption>
-
-    <div class='control-section-register'>
-        <div class="control-label">
-            <label>账户ID:</label>
-            <input type="text" name="userID">
-        </div>
-        <div class="control-label">
-            <label>密码：</label>
-            <input type="text" name="userPW">
-        </div>
-        <div class="control-label">
-            <label>确认密码：</label>
-            <input type="text" name="userPW-re">
-        </div>
-        <div class="control-label">
-            <label>角色：</label>
-            <div class="select_btn">
-                <span class="select_tap" >普通用户</span>
-                <ul class="select_drop">
-                    <li>普通用户</li>
-                    <li>特权用户</li>
-                    <li>超级特权用户</li>
-                </ul>
-            </div><!--select_btn-->
-        </div><!--control-label-->
-        <button class="btn control-btn-role-save">添加</button>
-    </div><!--control-section-register-->
-
-    <div class="control-section-admini">
-        <label>普通用户：</label>
-        <div class="control-normal control-flag" data-type='normal'>
-            <ul class="ul-normal">
-                <li>用戶一<span class='changeRole control-icon-up'></span></li>
-                <li>用戶二<span class='changeRole control-icon-up'></span></li>
-                <li>用戶三<span class='changeRole control-icon-up'></span></li>
-            </ul>
-        </div>
-
-        <label>特权用户：</label>
-        <div class="control-special control-flag" data-type='special'>
-            <ul class="ul-special">
-                <li>用戶四<span class='changeRole control-icon-down'></span></li>
-                <li>用戶五<span class='changeRole control-icon-down'></span></li>
-                <li>用戶六<span class='changeRole control-icon-down'></span></li>
-            </ul>
-        </div>
-        <button class="btn control-btn-role-save">确定</button>
-
-    </div><!--control-section-admini-->
-</figure>
 <script src="./jQ/jquery-3.2.1.js"></script>
-<script src="JS/jquery-ui.js?ver=1.0.1"></script>
+<script src="JS/jquery-ui.js"></script>
 <script src="../Echarts/echarts.min.js"></script>
 <script src="./JS/zxf_page.js?ver=1.0.2"></script>
-<script src="./JS/index-init.js?ver=1.6.3"></script>
-<script src="./JS/index-event.js?ver=2.3.4"></script>
-
-<script src="JS/jquery.reveal.js"></script>
-<script src="JS/index_register&manage.js"></script>
+<script src="./JS/index-init.js?ver=1.5.8"></script>
+<script src="./JS/index-event.js?ver=2.1.4"></script>
 </body>
 </html>

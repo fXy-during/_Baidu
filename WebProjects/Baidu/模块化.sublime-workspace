@@ -1,0 +1,1602 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"each",
+				"each	.each()"
+			],
+			[
+				"trim",
+				"trim()	String"
+			],
+			[
+				"_",
+				"_month	Default"
+			],
+			[
+				"add",
+				"addClass	addClass"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"eac",
+				"each	.each()"
+			],
+			[
+				"fade",
+				"fadeIn	.fadeIn()"
+			],
+			[
+				"sl",
+				"slideUp	Default"
+			],
+			[
+				"dis",
+				"display	css"
+			],
+			[
+				"animate",
+				"animate	animate"
+			],
+			[
+				"slideD",
+				"slideDown	Default"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"footer",
+				"footer	Tag"
+			],
+			[
+				"setI",
+				"setItem	Default"
+			],
+			[
+				"re",
+				"ready	$(document).ready"
+			],
+			[
+				"ui",
+				"ui_reduce.png	w:23 h:24"
+			],
+			[
+				"css",
+				"css- 6.	 6. CSS 个性的圆角 "
+			],
+			[
+				"im",
+				"images/"
+			],
+			[
+				"paren",
+				"parents	.parents()"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"source",
+				"source_type	Default"
+			],
+			[
+				"key",
+				"keydown	keydown"
+			],
+			[
+				"c",
+				"css	.css() - single"
+			],
+			[
+				"hand",
+				"handled	Default"
+			],
+			[
+				"border-bott",
+				"border-bottom"
+			],
+			[
+				"mou",
+				"mouseout	mouseout"
+			],
+			[
+				"mo",
+				"mousemove	mousemove"
+			],
+			[
+				"si",
+				"siblings	Default"
+			],
+			[
+				"pa",
+				"parent	.parent()"
+			],
+			[
+				"filter",
+				"filter()	Array"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"child",
+				"children	Default"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"tes",
+				"test()	RegExp"
+			],
+			[
+				"slide",
+				"slideDown	.slideDown()"
+			],
+			[
+				"ligh",
+				"lightsalmon"
+			],
+			[
+				"ban",
+				"background-color"
+			],
+			[
+				"sty",
+				"style	Tag"
+			],
+			[
+				"val",
+				"val	.val()"
+			],
+			[
+				"va",
+				"val	.val()"
+			],
+			[
+				"scr",
+				"script	Tag"
+			],
+			[
+				"ra",
+				"random()	Math"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"String",
+				"stringify()	JSON"
+			],
+			[
+				"createC",
+				"createComparisonFunction	Default"
+			],
+			[
+				"objec",
+				"object2	Default"
+			],
+			[
+				"scrip",
+				"script	Tag"
+			],
+			[
+				"read",
+				"readyState	Document"
+			],
+			[
+				"comp",
+				"complete	Image"
+			],
+			[
+				"aj",
+				"ajaxstart	$.ajaxStart()"
+			],
+			[
+				"ajax",
+				"ajax	$.ajax()"
+			],
+			[
+				"border-bo",
+				"border-bottom"
+			],
+			[
+				"td",
+				"td	Tag"
+			],
+			[
+				"tr",
+				"tr	Tag"
+			],
+			[
+				"tbo",
+				"tbody	Tag"
+			],
+			[
+				"remo",
+				"remove	.remove()"
+			],
+			[
+				"get",
+				"get	get"
+			],
+			[
+				"col",
+				"col	Tag"
+			],
+			[
+				"table",
+				"table	Tag"
+			],
+			[
+				"tri",
+				"trigger	trigger"
+			],
+			[
+				"remove",
+				"remove	.remove()"
+			],
+			[
+				"getT",
+				"getTime()"
+			],
+			[
+				"insert",
+				"insertBefore	.insertBefore()"
+			],
+			[
+				"j",
+				"JQ/"
+			],
+			[
+				"opt",
+				"options	Select"
+			],
+			[
+				"lign",
+				"lightpink"
+			],
+			[
+				"J",
+				"JQ/"
+			],
+			[
+				"last",
+				"last	last"
+			],
+			[
+				"append",
+				"append	Default"
+			],
+			[
+				"tabl",
+				"table-column"
+			],
+			[
+				"ta",
+				"table-row"
+			],
+			[
+				"tab",
+				"table-column"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"on",
+				"onchange	Attr"
+			],
+			[
+				"getEle",
+				"getElementsByClassName()"
+			],
+			[
+				"js",
+				"jsonSample	Default"
+			],
+			[
+				"appen",
+				"append	.append"
+			],
+			[
+				"getJ",
+				"getjson	$.getjson()"
+			],
+			[
+				"btn",
+				"button	Tag"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"pu",
+				"push	Default"
+			],
+			[
+				"b",
+				"BDo-Spe.html"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"toggl",
+				"toggle	.toggle()"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"th",
+				"th	Tag"
+			],
+			[
+				"check",
+				"checkName	Default"
+			],
+			[
+				"Check",
+				"CheckObject	Default"
+			],
+			[
+				"B",
+				"BDo-ToEvent.html"
+			],
+			[
+				"deep",
+				"deepskyblue"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"light",
+				"lightskyblue"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"rea",
+				"ready	$(document).ready"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mi",
+				"middle"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"input",
+				"input	input - button"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"select",
+				"select	Tag"
+			],
+			[
+				"ri",
+				"right	css"
+			],
+			[
+				"bgc",
+				"bgc	background-color: #${1:fff};"
+			],
+			[
+				"axis",
+				"axisTick	Default"
+			],
+			[
+				"line",
+				"lineStyle	Default"
+			],
+			[
+				"ax",
+				"axisLabel	Default"
+			],
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"se",
+				"select	Tag"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"text-d",
+				"text-decoration"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"option",
+				"option	Tag"
+			],
+			[
+				"change",
+				"changeList	Default"
+			],
+			[
+				"li",
+				"lightskyblue"
+			],
+			[
+				"backgroundc",
+				"background-color"
+			],
+			[
+				"backc",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "BDo-Login.html",
+			"settings":
+			{
+				"buffer_size": 835,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "JS/error.js",
+			"settings":
+			{
+				"buffer_size": 897,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "JS/event-login.js",
+			"settings":
+			{
+				"buffer_size": 1583,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "JS/index-login.js",
+			"settings":
+			{
+				"buffer_size": 569,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 469.0,
+		"last_filter": "tmpl",
+		"selected_items":
+		[
+			[
+				"tmpl",
+				"Tmpl: Create html"
+			],
+			[
+				"html",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"debug",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 707.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/WebProjects/模块化测试/WebProjects/Baidu",
+		"/D/WebProjects/模块化测试/WebProjects/Baidu/JS"
+	],
+	"file_history":
+	[
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/CSS/type-event-new.css",
+		"/C/Users/ASUS-NJ/Desktop/前端实验_6以上/实验11_Bootstrap编程基础/pc.html",
+		"/C/Users/ASUS-NJ/Desktop/前端实验_6以上/实验11_Bootstrap编程基础/logo1_2.png",
+		"/D/WebProjects/Baidu/test/$.hover.html",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/BDo-Login.html",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/JS/index-login.js",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/CSS/type.css",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/CSS/type-spe-new.css",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/CSS/jquery-ui.css",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/CSS/zxf_page.css",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/CSS/calendar.css",
+		"/D/WebProjects/15.6备份/WebProjects/Baidu/JS/calendar.js",
+		"/D/WebProjects/Baidu/test/Dom.html",
+		"/D/WebProjects/Baidu/JS/index-login.js",
+		"/D/HTML_Test/立即执行函数/test.html",
+		"/D/WebProjects/Baidu/CSS/type-login.css",
+		"/D/WebProjects/Baidu/CSS/zxf_page.css",
+		"/D/WebProjects/Baidu/CSS/jquery.page.css",
+		"/D/WebProjects/Baidu/CSS/type.css",
+		"/D/WebProjects/Baidu/test/toggle.html",
+		"/D/WebProjects/Baidu/app.js",
+		"/C/Users/ASUS-NJ/Desktop/前端课程作业/实验2_JavaScript及其对象编程基础/新建文件夹/pc.js",
+		"/D/WebProjects/Baidu/CSS/type-ana-new.css",
+		"/D/WebProjects/Baidu/CSS/type-event-new.css",
+		"/D/WebProjects/Baidu/CSS/type-event.css",
+		"/D/HTML_Test/Mockjs/aaa.html",
+		"/D/WebProjects/Baidu/test/select-test.html",
+		"/D/WebProjects/Baidu/test/function.html",
+		"/C/Users/ASUS-NJ/Desktop/新建文件夹 (4)/pc.html",
+		"/C/Users/ASUS-NJ/Desktop/新建文件夹 (4)/pc.js",
+		"/D/HTML_Test/Ajax/getJSON（）.html",
+		"/D/WebProjects/Baidu/test/table.html",
+		"/D/WebProjects/Baidu/BDo-Ana.html",
+		"/D/WebProjects/Baidu/JS/index-event.js",
+		"/D/WebProjects/Baidu/JS/index-spe.js",
+		"/D/HTML_Test/jquery-Datepicker/index.html",
+		"/D/HTML_Test/Mockjs/mockjs_test.html",
+		"/D/HTML_Test/Mockjs/app.js",
+		"/D/HTML_Test/Mockjs/service.js",
+		"/C/Users/ASUS-NJ/blog/routes/index.js",
+		"/D/WebProjects/Baidu/mockjs_test.html",
+		"/D/HTML_Test/Mockjs/mock-1.js",
+		"/D/HTML_Test/Mockjs/index.html",
+		"/D/HTML_Test/Mock-refactoring/README.md",
+		"/D/HTML_Test/JQ-Exercise/动画.html",
+		"/C/Users/ASUS-NJ/Desktop/index-init.js",
+		"/C/Users/ASUS-NJ/Desktop/index-ana.js",
+		"/D/UsefulCode/3.3.3.js",
+		"/D/WebProjects/Baidu/CSS/type-spe-new.css",
+		"/D/WebProjects/Baidu/JS/index-ana.js",
+		"/D/WebProjects/Baidu/JS/index-initEchart.js",
+		"/D/HTML_Test/jquery-Datepicker/Datepicker.html",
+		"/D/HTML_Test/Ajax/Datepicker.html",
+		"/D/HTML_Test/Ajax/test.html",
+		"/D/WebProjects/Baidu/JS/getJSON（）.html",
+		"/D/WebProjects/Baidu/CSS/type-ana.css",
+		"/D/WebProjects/Baidu/CSS/type-event-nes",
+		"/D/HTML_Test/JQ-Exercise/连试操作初体验.html",
+		"/D/HTML_Test/JQ-Exercise/imooc.html",
+		"/D/HTML_Test/设计模式/灵活的js.html",
+		"/D/HTML_Test/设计模式/品牌列表效果.html",
+		"/D/WebProjects/Baidu/CSS/type-spe.css",
+		"/D/WebProjects/Baidu/BDo-Spe.html",
+		"/D/WebProjects/Baidu/BDo-Event.html",
+		"/D/Tomcat/webapps/ROOT/rtc/webdemo/im/js/md5.js",
+		"/D/WebProjects/Baidu/CSS/type",
+		"/D/HTML_Test/中国剩余.html",
+		"/D/WebProjects/Baidu/CSS/type-spe",
+		"/D/WebProjects/Baidu/BDo-ToEvent.html",
+		"/D/WebProjects/Baidu/IFE2-echarts.html",
+		"/D/iframeTest.html",
+		"/D/WebProjects/Baidu/index.js",
+		"/D/WebProjects/Baidu/BDo.html",
+		"/D/HTML_Test/JQ-Exercise/参数内置匿名函数.html",
+		"/D/HTML_Test/JQ-Exercise/html和text().html",
+		"/D/HTML_Test/JQ-Exercise/.html和.text",
+		"/D/HTML_Test/JQ-Exercise/.html()&text().html",
+		"/D/HTML_Test/CSS知多少/结构化伪类.html",
+		"/D/HTML_Test/CSS知多少/伪类-小三角.html",
+		"/D/HTML_Test/CSS知多少/盒子.html",
+		"/D/HTML_Test/CSS知多少/BFC.html",
+		"/D/HTML_Test/CSS知多少",
+		"/D/WebProjects/Baidu/type.css",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第七次/实验/实验七_201531060396_付星昱/exp7/WebContent/register.jsp",
+		"/D/HTML_Test/ToDolist-light.html",
+		"/D/WebProjects/Baidu/echartsTest.html",
+		"/D/WebProjects/Echarts/echarts.js",
+		"/D/HTML_Test/DOTOlist.html",
+		"/D/HTML_Test/4.11.html",
+		"/D/HTML_Test/GetUserMedia实例.html",
+		"/D/HTML_Test/DTlight.js",
+		"/D/HTML_Test/DTlight.css",
+		"/D/HTML_Test/闭包.html",
+		"/D/HTML_Test/LocalStorage-test.html",
+		"/D/HTML_Test/DoTolist.js",
+		"/D/HTML_Test/ToDoY.css",
+		"/D/Tomcat/webapps/ROOT/JDBC/info.jsp",
+		"/D/Tomcat/webapps/ROOT/JDBC/userEdit.jsp",
+		"/D/HTML_Test/IFE/IFE-Test8.html",
+		"/D/HTML_Test/Im/RTC_Test.html",
+		"/C/Users/ASUS-NJ/Desktop/SkyRTC-demo-master/index.html",
+		"/D/HTML_Test/FirstJq.html",
+		"/D/HTML_Test/FirstVideo.html",
+		"/D/HTML_Test/4.5.html",
+		"/D/SkyRTC-demo/index.html",
+		"/C/Users/ASUS-NJ/Desktop/NIM_Web_Demo-master/app.js",
+		"/C/Users/ASUS-NJ/Desktop/NIM_Web_Demo-master/webdemo/im/js/config.js",
+		"/C/Users/ASUS-NJ/Desktop/新建文件夹 (2)/js/NIM_Web_SDK_v3.5.0.js",
+		"/D/Tomcat/webapps/ROOT/rtc/webdemo/im/js/link.js",
+		"/C/Users/ASUS-NJ/Desktop/SkyRTC-demo-master/README.md",
+		"/C/Users/ASUS-NJ/AppData/Local/Temp/360zip$Temp/360$0/README.md",
+		"/D/HTML_Test/3.6.4.html",
+		"/D/HTML_Test/CSS margin-padding.html",
+		"/D/Tomcat/webapps/ROOT/files/list.jsp",
+		"/D/Tomcat/webapps/ROOT/files/login.jsp",
+		"/D/Tomcat/webapps/ROOT/test3/Test-one/JS/ECMAScript中的函数传值.html",
+		"/D/HTML_Test/Canvas.html",
+		"/D/HTML_Test/抛物线运动.js",
+		"/D/Tomcat/webapps/ROOT/exp4/mobileInfo.jsp",
+		"/D/Tomcat/webapps/ROOT/JSPQW.jsp",
+		"/D/Tomcat/webapps/ROOT/exp4/mobileAdd.jsp",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第四次/作业/作业四/HTML&&JSP/List.jsp",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第四次/作业/作业四/HTML&&JSP/error.jsp",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第四次/作业/作业四/HTML&&JSP/Detail.jsp",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第四次/作业/作业四/HTML&&JSP/Login.jsp",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第四次/作业/作业四/HTML&&JSP/loginOn.html",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第四次/作业/作业四/HTML&&JSP/Manager.html",
+		"/C/Users/ASUS-NJ/Desktop/JSP/第四次/作业/作业四/HTML&&JSP/logout.jsp"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"let",
+			"pointer",
+			"error",
+			"url",
+			"();\n",
+			"mouth",
+			"$();\n",
+			"button",
+			".add_input",
+			"datepicker",
+			".",
+			" '],",
+			"004cfd",
+			"changeSelect",
+			"initEchart",
+			"table",
+			"currPage",
+			"updata",
+			"initData",
+			"false",
+			"source_name",
+			"checkDate",
+			"source_type",
+			"section",
+			"initEchart",
+			"spe",
+			"select_drop",
+			"source_name",
+			"chart",
+			"initEchart",
+			"section",
+			":);",
+			"chart_date_input",
+			"initWholePage",
+			"updata",
+			"updata_topic",
+			"token",
+			"data-logo",
+			"table",
+			"initData",
+			"未处置",
+			"错误处置条件",
+			"initFeedBack",
+			"show",
+			"event_add_detail",
+			"sentry_two",
+			"readlyWrap",
+			"readlyTable",
+			"option",
+			"source_name",
+			"checkDate",
+			"changeSelect",
+			"checkDate",
+			"source_name",
+			"200",
+			"400",
+			",\"linear\"",
+			"400",
+			"100",
+			"linear",
+			"200",
+			"400",
+			"getSumPage",
+			"tableAim",
+			"flush",
+			"width18",
+			"width",
+			"readlyWrap",
+			"hide",
+			"rollback",
+			"btn",
+			"nextPage",
+			"table-title",
+			"tableTipOne",
+			"page",
+			"speC",
+			"page",
+			"th",
+			"world",
+			"hello world",
+			"this",
+			"    \n",
+			"val",
+			"data",
+			"hover",
+			"text-overflow",
+			"spePage",
+			"spe",
+			"pageCis",
+			"spePage",
+			"a",
+			"tableSec",
+			"table",
+			"tableFir",
+			"tableTipOne",
+			"add",
+			"chartTit",
+			"tableIcon",
+			"chartSec-",
+			";\n",
+			"7",
+			"6",
+			"span",
+			"header",
+			";\n",
+			"div",
+			"section",
+			"CONFIG",
+			"where",
+			"done",
+			"readly",
+			"flex",
+			"listWrap",
+			"<header id=\"header\" class=\"\">\n            \n        </header>",
+			"right",
+			"flag",
+			"o",
+			"id",
+			"readlychild",
+			"div",
+			">\n",
+			"span",
+			"添加新任务",
+			"span",
+			"tip",
+			"newlist",
+			"new",
+			"ol"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "BDo-Login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								426,
+								426
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								225,
+								6,
+								30,
+								11,
+								59,
+								18,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": true,
+									"phpExtraPaths":
+									[
+										"H:/website/framework"
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"function_name_status_row": 12,
+							"incomplete_sync": null,
+							"is_xml": false,
+							"origPos": 150.0,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "JS/error.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								873,
+								864
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								225,
+								6,
+								30,
+								15,
+								30,
+								51,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"function_name_status_row": 33,
+							"incomplete_sync": null,
+							"origPos": 0.0,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "JS/event-login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								225,
+								6,
+								30,
+								15,
+								38,
+								45,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": true,
+									"phpExtraPaths":
+									[
+										"H:/website/framework"
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"function_name_status_row": 1,
+							"incomplete_sync": null,
+							"origPos": 0.0,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "JS/index-login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								207
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								225,
+								6,
+								30,
+								11,
+								59,
+								19,
+								0,
+								0,
+								0,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": true,
+									"phpExtraPaths":
+									[
+										"H:/website/framework"
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+							"function_name_status_row": 13,
+							"incomplete_sync": null,
+							"origPos": 0.0,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.503754693367,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "模块化.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"3.",
+				"D:\\HTML_Test\\3.3.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 247.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
